@@ -1,4 +1,4 @@
-# Analyzing-Business-Metrics-For-Mineblocks-SQL
+# Business-Metrics-For-Mineblocks-SQL
 
 As a data scientist, when you’re not investigating spikes or dips in your data, you might be building dashboards of KPIs, or key performance indicators for a company.
 
