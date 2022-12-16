@@ -44,7 +44,7 @@ FROM gameplays
 GROUP BY 1,2
 ORDER BY 1,2;
 
--- To get Daily ARPPU, modify the daily revenue query from earlier to divide by the number of purchasers.
+-- To get Daily ARPPU (Daily Average Revenue Per Purchasing User), modify the daily revenue query from earlier to divide by the number of purchasers.
 SELECT 
   DATE(created_at),
   ROUND(SUM(price) / COUNT(DISTINCT(user_id)), 2) as arppu
@@ -87,7 +87,7 @@ SELECT *
 FROM daily_players
 ORDER BY dt;
 
--- Now that we have the revenue and DAU, join them on their dates and calculate daily ARPU.
+-- Now that we have the revenue and DAU, join them on their dates and calculate daily ARPU (Average Revenue Per User).
 SELECT 
   daily_revenue.dt,
   daily_revenue.rev / daily_players.players
